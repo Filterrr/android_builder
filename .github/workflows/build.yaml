@@ -23,7 +23,7 @@ jobs:
         working-directory: ./project
         run: |
           if [ ! -f "gradle" ]; then gradle wrapper; fi
-          chmod +x gradlew
+          chmod +x gradle
           ./gradlew assembleRelease --stacktrace
       - name: Upload APK
         uses: actions/upload-artifact@v3
